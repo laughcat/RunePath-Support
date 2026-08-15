@@ -72,6 +72,54 @@
     }
   };
 
+  const contactCopy = {
+    en: {
+      contactBody: "Email us directly or open a support request on GitHub. Include your device model, iOS version, app language, and the steps that caused the issue. Do not include private information.",
+      emailButton: "Email support",
+      contactPolicyText: "For privacy or support questions, email RunePath Support or open an issue. Please do not include personal or sensitive information."
+    },
+    "zh-Hans": {
+      contactBody: "你可以直接发送邮件，或在 GitHub 提交支持请求。请注明设备型号、iOS 版本、App 语言和问题复现步骤，并避免包含私人信息。",
+      emailButton: "发送支持邮件",
+      contactPolicyText: "如有隐私或支持问题，请发送邮件或在符文小径支持仓库提交 Issue。请勿包含个人或敏感信息。"
+    },
+    "zh-Hant": {
+      contactBody: "你可以直接傳送電子郵件，或在 GitHub 提交支援請求。請註明裝置型號、iOS 版本、App 語言與重現步驟，並避免包含私人資訊。",
+      emailButton: "傳送支援郵件",
+      contactPolicyText: "如有隱私或支援問題，請傳送電子郵件或在符文小徑支援儲存庫提交 Issue。請勿包含個人或敏感資訊。"
+    },
+    ja: {
+      contactBody: "メールで直接問い合わせるか、GitHubでサポートリクエストを作成してください。端末、iOS、Appの言語、再現手順を記載し、個人情報は含めないでください。",
+      emailButton: "メールで問い合わせ",
+      contactPolicyText: "プライバシーまたはサポートについては、メールまたはRunePath SupportリポジトリのIssueからお問い合わせください。個人情報や機密情報は含めないでください。"
+    },
+    ko: {
+      contactBody: "이메일로 직접 문의하거나 GitHub에 지원 요청을 열어 주세요. 기기 모델, iOS 버전, 앱 언어, 재현 단계를 적고 개인정보는 포함하지 마세요.",
+      emailButton: "이메일로 문의",
+      contactPolicyText: "개인정보 또는 지원 문의는 이메일을 보내거나 RunePath Support 저장소에 Issue를 열어 주세요. 개인 또는 민감한 정보는 포함하지 마세요."
+    },
+    es: {
+      contactBody: "Escríbenos directamente o abre una solicitud en GitHub. Incluye el modelo del dispositivo, la versión de iOS, el idioma y los pasos para reproducir el problema. No incluyas datos privados.",
+      emailButton: "Enviar correo",
+      contactPolicyText: "Para preguntas de privacidad o soporte, envía un correo a RunePath Support o abre una incidencia. No incluyas información personal o sensible."
+    },
+    "pt-BR": {
+      contactBody: "Envie um e-mail diretamente ou abra uma solicitação no GitHub. Inclua o modelo do aparelho, a versão do iOS, o idioma e os passos para reproduzir o problema. Não inclua informações privadas.",
+      emailButton: "Enviar e-mail",
+      contactPolicyText: "Para questões de privacidade ou suporte, envie um e-mail ao RunePath Support ou abra um Issue. Não inclua dados pessoais ou sensíveis."
+    },
+    de: {
+      contactBody: "Sende uns direkt eine E-Mail oder öffne eine Supportanfrage auf GitHub. Nenne Gerätemodell, iOS-Version, App-Sprache und Schritte zur Reproduktion. Bitte keine privaten Daten angeben.",
+      emailButton: "E-Mail senden",
+      contactPolicyText: "Sende bei Datenschutz- oder Supportfragen eine E-Mail an RunePath Support oder öffne ein Issue. Gib keine persönlichen oder sensiblen Informationen an."
+    },
+    fr: {
+      contactBody: "Envoyez-nous directement un e-mail ou ouvrez une demande sur GitHub. Indiquez le modèle de l’appareil, la version d’iOS, la langue et les étapes de reproduction. N’incluez aucune information privée.",
+      emailButton: "Envoyer un e-mail",
+      contactPolicyText: "Pour toute question de confidentialité ou d’assistance, envoyez un e-mail à RunePath Support ou ouvrez une Issue. N’incluez pas d’informations personnelles ou sensibles."
+    }
+  };
+
   const supported = Object.keys(locales);
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
@@ -83,7 +131,7 @@
 
   function applyLanguage(code) {
     current = supported.includes(code) ? code : "en";
-    const strings = { ...en, ...locales[current] };
+    const strings = { ...en, ...locales[current], ...contactCopy[current] };
     document.documentElement.lang = current;
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = strings[element.dataset.i18n];

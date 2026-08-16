@@ -120,6 +120,66 @@
     }
   };
 
+  const hintCopy = {
+    en: { faqHintA: "Each target allows one partial hint. It reveals only the opening of a valid path and resets your combo, so you still finish the puzzle yourself." },
+    "zh-Hans": { faqHintA: "每个目标只能使用一次部分提示。它只标出可行路径的开头，并会清空连击，最后仍需由你完成。" },
+    "zh-Hant": { faqHintA: "每個目標只能使用一次部分提示。它只標出可行路徑的開頭，並會清空連擊，最後仍需由你完成。" },
+    ja: { faqHintA: "各ターゲットで使える部分ヒントは1回だけです。有効なルートの出だしだけを示し、コンボはリセットされるため、最後は自分で完成させます。" },
+    ko: { faqHintA: "목표마다 부분 힌트를 한 번만 사용할 수 있습니다. 가능한 경로의 시작만 보여 주고 콤보가 초기화되므로, 나머지는 직접 완성해야 합니다." },
+    es: { faqHintA: "Cada objetivo permite una sola pista parcial. Solo muestra el inicio de una ruta válida y reinicia el combo, así que aún debes completar el puzle." },
+    "pt-BR": { faqHintA: "Cada alvo permite uma única dica parcial. Ela mostra apenas o início de um caminho válido e reinicia o combo, então você ainda conclui o desafio." },
+    de: { faqHintA: "Pro Ziel gibt es einen Teilhinweis. Er zeigt nur den Anfang eines gültigen Pfads und setzt die Kombo zurück, sodass du das Rätsel selbst beendest." },
+    fr: { faqHintA: "Chaque cible autorise un seul indice partiel. Il montre uniquement le début d’un chemin valide et réinitialise le combo : à vous de terminer le puzzle." }
+  };
+
+  const puzzleCopy = {
+    en: {
+      quickPlaySub: "Targets, paths, and scoring",
+      faqPlayA: "Connect adjacent numbers so their total exactly matches the target. Complete 60 puzzles across five chapters and choose one lasting blessing after each chapter.",
+      faqDataA: "Best score, journeys, furthest puzzle, and haptics preference are stored only on your device. Deleting the app removes this local data."
+    },
+    "zh-Hans": {
+      quickPlaySub: "目标、路径与计分",
+      faqPlayA: "连接相邻数字，使总和精确等于目标值。完成五个章节的 60 道谜题，并在每章结束后选择一项持续生效的祝福。",
+      faqDataA: "最高分、旅程次数、最远谜题和触觉偏好仅保存在你的设备上。删除 App 会同时删除这些本地数据。"
+    },
+    "zh-Hant": {
+      quickPlaySub: "目標、路徑與計分",
+      faqPlayA: "連接相鄰數字，使總和精確等於目標值。完成五個章節的 60 道謎題，並在每章結束後選擇一項持續生效的祝福。",
+      faqDataA: "最高分、旅程次數、最遠謎題和觸覺偏好只保存在你的裝置上。刪除 App 會同時刪除這些本機資料。"
+    },
+    ja: {
+      quickPlaySub: "目標、経路、スコア",
+      faqPlayA: "隣り合う数字をつなぎ、合計を目標値にぴったり合わせます。5つの章で60問を解き、各章の最後に永続する祝福を1つ選びます。",
+      faqDataA: "ベストスコア、旅の回数、到達した問題、触覚設定は端末内にのみ保存されます。Appを削除するとこれらのデータも消去されます。"
+    },
+    ko: {
+      quickPlaySub: "목표, 경로, 점수",
+      faqPlayA: "인접한 숫자를 연결해 합을 목표와 정확히 맞추세요. 다섯 챕터의 60개 퍼즐을 풀고 챕터가 끝날 때마다 계속 적용되는 축복 하나를 선택합니다.",
+      faqDataA: "최고 점수, 여정 횟수, 최장 진행 퍼즐, 햅틱 설정은 기기에만 저장됩니다. 앱을 삭제하면 이 로컬 데이터도 삭제됩니다."
+    },
+    es: {
+      quickPlaySub: "Objetivos, caminos y puntuación",
+      faqPlayA: "Conecta números adyacentes hasta que la suma coincida exactamente con el objetivo. Completa 60 puzles en cinco capítulos y elige una bendición permanente tras cada capítulo.",
+      faqDataA: "El récord, los viajes, el puzle más lejano y la preferencia háptica se guardan solo en tu dispositivo. Al eliminar la app, se borran estos datos locales."
+    },
+    "pt-BR": {
+      quickPlaySub: "Alvos, caminhos e pontuação",
+      faqPlayA: "Conecte números vizinhos até que a soma seja exatamente igual ao alvo. Conclua 60 desafios em cinco capítulos e escolha uma bênção permanente ao fim de cada capítulo.",
+      faqDataA: "Recorde, jornadas, desafio mais distante e preferência tátil ficam somente no dispositivo. Excluir o app remove esses dados locais."
+    },
+    de: {
+      quickPlaySub: "Ziele, Pfade und Punkte",
+      faqPlayA: "Verbinde benachbarte Zahlen, bis ihre Summe exakt dem Ziel entspricht. Löse 60 Rätsel in fünf Kapiteln und wähle nach jedem Kapitel einen dauerhaften Segen.",
+      faqDataA: "Bestwert, Reisen, weitestes Rätsel und Haptik-Einstellung werden nur auf deinem Gerät gespeichert. Beim Löschen der App werden diese lokalen Daten entfernt."
+    },
+    fr: {
+      quickPlaySub: "Cibles, chemins et score",
+      faqPlayA: "Reliez des nombres adjacents jusqu’à ce que leur somme corresponde exactement à la cible. Résolvez 60 puzzles en cinq chapitres et choisissez une bénédiction durable après chaque chapitre.",
+      faqDataA: "Meilleur score, voyages, puzzle le plus avancé et préférence haptique sont uniquement stockés sur votre appareil. Supprimer l’app efface ces données locales."
+    }
+  };
+
   const supported = Object.keys(locales);
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("lang");
@@ -131,7 +191,7 @@
 
   function applyLanguage(code) {
     current = supported.includes(code) ? code : "en";
-    const strings = { ...en, ...locales[current], ...contactCopy[current] };
+    const strings = { ...en, ...locales[current], ...contactCopy[current], ...hintCopy[current], ...puzzleCopy[current] };
     document.documentElement.lang = current;
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = strings[element.dataset.i18n];
